@@ -15,6 +15,7 @@
  */
 function logNames(items) {
   // TODO: use `forEach`
+  items.forEach((item) => console.log(item.name));
 }
 
 /**
@@ -23,6 +24,9 @@ function logNames(items) {
  */
 function getUppercaseNames(items) {
   // TODO: use `map`
+  const upperCaseNames = items.map(item => item.name.toUpperCase());
+  console.log(upperCaseNames);
+
 }
 
 /**
