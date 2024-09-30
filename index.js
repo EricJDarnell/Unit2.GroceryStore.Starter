@@ -79,7 +79,7 @@ function countItems(items) {
  */
 function calculateTotalPrice(items) {
   const totalPriceArray = items.map((item) => item.price * item.quantity);
-  const totalPrice = totalPriceArray.reduce((acc, cv) => acc + cv);
+  const totalPrice = totalPriceArray.reduce((accumulator, currentValue) => accumulator + currentValue);
   return totalPrice;
 }
 
