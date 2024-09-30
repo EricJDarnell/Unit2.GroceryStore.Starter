@@ -1,4 +1,7 @@
+Seeing as how the Block16 only accepts a file upload, I've added the 
+github link here: https://github.com/EricJDarnell/Unit2.GroceryStore.Starter.git
 # Unit 2 | Grocery Store
+
 
 For this workshop, you will be building a simple app that asks for some input data, and will use array methods to manipulate and retrieve data from our array of grocery items.
 
