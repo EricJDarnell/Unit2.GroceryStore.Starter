@@ -14,7 +14,7 @@
  * @param {Item[]} items - array of items
  */
 function logNames(items) {
-  items.forEach((item) => console.log(item.name));
+  items.forEach((i) => console.log(i.name));
 }
 
 /**
@@ -22,8 +22,8 @@ function logNames(items) {
  * @returns {string[]} an array of item names in all uppercase
  */
 function getUppercaseNames(items) {
-  const ITEM = items.map((item) => item.name.toUpperCase());
-  return ITEM;
+  const uppercaseItem = items.map((item) => item.name.toUpperCase());
+  return uppercaseItem;
 }
 
 /**
@@ -56,8 +56,8 @@ function getItemPriceByName(items, name) {
  * @param {string} category
  * @returns {Item[]} array of items that belong to the given `category`
  */
-function getItemsByCategory(items, category) {
-  const itemCat = items.filter((item) => item.category === category);
+function getItemsByCategory(items, cat) {
+  const itemCat = items.filter((thing) => thing.category === cat);
   return itemCat;
 }
 
@@ -66,11 +66,10 @@ function getItemsByCategory(items, category) {
  * @returns {number} the total quantity of all items
  */
 function countItems(items) {
-  const itemCountArray = items.map((item) => item.quantity);
-  const sumOfQuantities = itemCountArray.reduce(
-    (accumulator, currentValue) => accumulator + currentValue
-  );
+  const sumOfQuantities = items.reduce((accumulator, things) => accumulator + things.quantity, 0);
   return sumOfQuantities;
+
+
 }
 
 /**
@@ -78,8 +77,7 @@ function countItems(items) {
  * @returns {number} the cost of all given items
  */
 function calculateTotalPrice(items) {
-  const totalPriceArray = items.map((item) => item.price * item.quantity);
-  const totalPrice = totalPriceArray.reduce((accumulator, currentValue) => accumulator + currentValue);
+  const totalPrice = items.reduce((accumulator, things) => accumulator + (things.quantity * things.price), 0);
   return totalPrice;
 }
 
